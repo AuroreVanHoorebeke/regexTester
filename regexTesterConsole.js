@@ -3,7 +3,7 @@ let readlineSync = require("readline-sync");
 let testInput = readlineSync.question("Test case: ")
 let patternInput = readlineSync.question("Pattern to test: ")
 
-checker();
+checker(testInput, patternInput);
 
 function checker(testInput, patternInput){
 
