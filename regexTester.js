@@ -1,5 +1,9 @@
 //-----------Create divs-----------------//
 const body = document.querySelector("body");
+/** 
+*Creates the necessary HTML elements to display the RegEx tester
+*/
+function generateHTML(){
 
 const tester = document.createElement("div");
 tester.className = "tester";
@@ -98,10 +102,21 @@ colorBox.style.height = "100px";
 colorBox.style.border = "1px solid black";
 tester.appendChild(colorBox);
 
+return{testInput, checkboxI, checkboxG, checkboxM, patternInput, colorBox};
+};
 
 //----Event listeners----//
+let returnedVar = generateHTML();
+    let testInput = returnedVar.testInput;
+    let patternInput = returnedVar.patternInput;
+    let checkboxI = returnedVar.checkboxI;
+    let checkboxG = returnedVar.checkboxG;
+    let checkboxM = returnedVar.checkboxM;
+    let colorBox = returnedVar.colorBox;
 
-body.addEventListener("change", function (){
+
+function checker(testInput, checkboxI, checkboxG, checkboxM, patternInput,colorBox){
+
     let testValue = testInput.value;
     
     console.log('change')
@@ -131,4 +146,38 @@ body.addEventListener("change", function (){
     };
 
     console.log(pattern);
-});
+}
+
+body.addEventListener("change", checker(testInput, checkboxI, checkboxG, checkboxM, patternInput,colorBox));
+
+// body.addEventListener("change", function (testInput, checkboxI, checkboxG, checkboxM, patternInput){
+//     let testValue = testInput.value;
+    
+//     console.log('change')
+//     let flag = "";
+
+//     if (checkboxI.checked){
+//         flag += "i";
+
+//     };
+//     if (checkboxG.checked) {
+//         flag += "g";
+
+//     };
+//     if (checkboxM.checked) {
+//         flag += "m";
+
+//     };
+
+//     let pattern = new RegExp(patternInput.value, flag);
+    
+//     if (testValue.match(pattern)) {
+//         console.log(`${testValue} has the correct pattern!`);
+//         colorBox.style.backgroundColor = "green";
+//     } else {
+//         console.log(`${testValue} has an incorrect pattern!`);
+//         colorBox.style.backgroundColor = "red";
+//     };
+
+//     console.log(pattern);
+// });
