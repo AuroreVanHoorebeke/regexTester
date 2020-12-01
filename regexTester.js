@@ -5,11 +5,44 @@ const tester = document.createElement("div");
 tester.className = "tester";
 body.appendChild(tester);
 
+const inputsDiv = document.createElement("div");
+inputsDiv.className = "inputs";
+tester.appendChild(inputsDiv);
+
+const fieldsDiv = document.createElement("div");
+fieldsDiv.className = "fields";
+inputsDiv.appendChild(fieldsDiv);
+
+const checkboxesDiv = document.createElement("div");
+checkboxesDiv.className = "checkboxes";
+inputsDiv.appendChild(checkboxesDiv);
+
+//*-*-Test case-*-*//
+const testDiv = document.createElement("div");
+testDiv.className = "testDiv";
+fieldsDiv.appendChild(testDiv);
+
+const testInput = document.createElement("input");
+testInput.type = "text";
+testInput.placeholder = "Case to test";
+testInput.innerHTML = "";
+testDiv.appendChild(testInput);
+
+//*-*-Pattern to verify-*-*//
+const patternDiv = document.createElement("div");
+patternDiv.className = "patternDiv";
+fieldsDiv.appendChild(patternDiv);
+
+let patternInput = document.createElement("input");
+patternInput.type = "text";
+patternInput.placeholder = "Regex pattern";
+patternInput.innerHTML = "";
+patternDiv.appendChild(patternInput);
 
 //*-*-Checkbox I-*-*//
 const checkboxIDiv = document.createElement("div");
 checkboxIDiv.className = "checkboxIDiv";
-tester.appendChild(checkboxIDiv);
+checkboxesDiv.appendChild(checkboxIDiv);
 
 const checkboxI = document.createElement("input");
 checkboxI.type = "checkbox";
@@ -26,7 +59,7 @@ checkboxIDiv.appendChild(labelCheckboxI);
 //*-*-Checkbox G-*-*//
 const checkboxGDiv = document.createElement("div");
 checkboxGDiv.className = "checkboxGDiv";
-tester.appendChild(checkboxGDiv);
+checkboxesDiv.appendChild(checkboxGDiv);
 
 const checkboxG = document.createElement("input");
 checkboxG.type = "checkbox";
@@ -43,7 +76,7 @@ checkboxGDiv.appendChild(labelCheckboxG);
 //*-*-Checkbox m-*-*//
 const checkboxMDiv = document.createElement("div");
 checkboxMDiv.className = "checkboxIDiv";
-tester.appendChild(checkboxMDiv);
+checkboxesDiv.appendChild(checkboxMDiv);
 
 const checkboxM = document.createElement("input");
 checkboxM.type = "checkbox";
@@ -57,31 +90,9 @@ labelCheckboxM.for = "checkboxM";
 labelCheckboxM.innerHTML = "multiline";
 checkboxMDiv.appendChild(labelCheckboxM);
 
-//*-*-Test case-*-*//
-const testDiv = document.createElement("div");
-testDiv.className = "testDiv";
-tester.appendChild(testDiv);
-
-const testInput = document.createElement("input");
-testInput.type = "text";
-testInput.placeholder = "Case to test";
-testInput.innerHTML = "";
-testDiv.appendChild(testInput);
-
-//*-*-Pattern to verify-*-*//
-const patternDiv = document.createElement("div");
-patternDiv.className = "patternDiv";
-tester.appendChild(patternDiv);
-
-let patternInput = document.createElement("input");
-patternInput.type = "text";
-patternInput.placeholder = "Regex pattern";
-patternInput.innerHTML = "";
-patternDiv.appendChild(patternInput);
-
 //*-*-Color box-*-*//
 const colorBox = document.createElement("div");
-colorBox.className = "colorBoxDiv";
+colorBox.className = "colorBox";
 colorBox.style.width = "100px";
 colorBox.style.height = "100px";
 colorBox.style.border = "1px solid black";
