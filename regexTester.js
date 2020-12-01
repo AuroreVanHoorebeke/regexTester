@@ -4,7 +4,6 @@ const body = document.querySelector("body");
 *Creates the necessary HTML elements to display the RegEx tester
 */
 function generateHTML(){
-
 const tester = document.createElement("div");
 tester.className = "tester";
 body.appendChild(tester);
