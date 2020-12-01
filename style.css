@@ -1,0 +1,20 @@
+.tester {
+    display: flex;
+    padding: 10px;
+}
+
+.inputs{
+    padding: 10px;
+}
+
+.colorBox {
+    padding: 10px;
+}
+
+.testDiv {
+    padding-bottom: 10px;
+}
+
+.patternDiv {
+    padding-bottom: 10px;
+}
