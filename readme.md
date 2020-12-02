@@ -10,4 +10,9 @@ I learned how to use user input to create a regular expression and how to create
 
 ## Screenshot  
 
--coming soon-
+### Web version:  
+![RegEx tester web version](assets/img/regExTester_web.png)  
+[Link to web version](https://aurorevanhoorebeke.github.io/regexTester/)  
+### Terminal version:  
+![Terminal version](assets/img/regexTester_terminal.png)  
+[See code](regexTesterConsole.js)
